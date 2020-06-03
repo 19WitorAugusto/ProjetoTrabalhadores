@@ -36,27 +36,27 @@ public class Progran {
 		int qntContratos = sc.nextInt();
 
 		for (int i = 1; i <= qntContratos; i++) {
-			System.out.println("Entre com os dados do contrato "+i+": ");
+			System.out.println("Entre com os dados do contrato " + i + ": ");
 			System.out.println("Data (DD/MM/YYYY)");
-			Date dataContrato = sdf.parse(sc.next()); 
+			Date dataContrato = sdf.parse(sc.next());
 			System.out.println("Valor por hora: ");
 			double valorHora = sc.nextDouble();
 			System.out.println("quantas horas: ");
 			int horas = sc.nextInt();
-			
+
 			ContratoHora contrato = new ContratoHora(dataContrato, valorHora, horas);
 			trab.addContrato(contrato);
 		}
-		
+
 		System.out.println("Entre com o mes e o ano que deseja calcular a renda (MM/YYYY)");
 		String mesEano = sc.next();
 		int mes = Integer.parseInt(mesEano.substring(0, 2));
 		int ano = Integer.parseInt(mesEano.substring(3));
-		
-		System.out.println("Nome: "+trab.getNome());
-		System.out.println("Departamento: "+trab.getDepartamento().getNome());
-		System.out.println("renta para "+mesEano+": "+ trab.renda(ano, mes));
-		
+
+		System.out.println("Nome: " + trab.getNome());
+		System.out.println("Departamento: " + trab.getDepartamento().getNome());
+		System.out.println("renda para " + mesEano + " é: " + trab.renda(ano, mes));
+
 		sc.close();
 	}
 
