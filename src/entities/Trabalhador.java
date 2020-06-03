@@ -17,7 +17,6 @@ public class Trabalhador {
 	public Trabalhador() {
 
 	}
-
 	public Trabalhador(String nome, NivelTrabalhador nivel, Double salarioBase, Departamento departamento) {
 		this.nome = nome;
 		this.nivel = nivel;
@@ -79,9 +78,7 @@ public class Trabalhador {
 			if (ano == c_ano && mes == c_mes) {
 				soma += c.valorTotal();
 			}
-
 		}
 		return soma;
 	}
-
 }

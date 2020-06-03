@@ -47,7 +47,6 @@ public class Progran {
 			ContratoHora contrato = new ContratoHora(dataContrato, valorHora, horas);
 			trab.addContrato(contrato);
 		}
-
 		System.out.println("Entre com o mes e o ano que deseja calcular a renda (MM/YYYY)");
 		String mesEano = sc.next();
 		int mes = Integer.parseInt(mesEano.substring(0, 2));
@@ -59,5 +58,4 @@ public class Progran {
 
 		sc.close();
 	}
-
 }
